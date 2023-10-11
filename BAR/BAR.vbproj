@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DCE238D-E536-4117-AE94-B9FE85D76332}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BAR.My.MyApplication</StartupObject>
+    <RootNamespace>BAR</RootNamespace>
+    <AssemblyName>BAR</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BAR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BAR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI, Version=4.1.0.3420, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EMGU.CV.4.1.0.3420\lib\net35\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World, Version=4.1.0.3420, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EMGU.CV.4.1.0.3420\lib\net35\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\Desktop\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel\AdminPanel.Designer.vb">
+      <DependentUpon>AdminPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AdminPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Attendance Records.Designer.vb">
+      <DependentUpon>Attendance Records.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Attendance Records.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Employee Records.Designer.vb">
+      <DependentUpon>Employee Records.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Employee Records.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Register Admin.Designer.vb">
+      <DependentUpon>Register Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Register Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Reports to HR.Designer.vb">
+      <DependentUpon>Reports to HR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Reports to HR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\User Management.Designer.vb">
+      <DependentUpon>User Management.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\User Management.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="namesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>namesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel.Designer.vb">
+      <DependentUpon>UserPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\ClockIn.Designer.vb">
+      <DependentUpon>ClockIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\ClockIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\ClockOut.Designer.vb">
+      <DependentUpon>ClockOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\ClockOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\MyProfile.Designer.vb">
+      <DependentUpon>MyProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\MyProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\userRegistration2.Designer.vb">
+      <DependentUpon>userRegistration2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\userRegistration2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userRegisteration.Designer.vb">
+      <DependentUpon>userRegisteration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userRegisteration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminPanel\AdminPanel.resx">
+      <DependentUpon>AdminPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Attendance Records.resx">
+      <DependentUpon>Attendance Records.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Employee Records.resx">
+      <DependentUpon>Employee Records.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Register Admin.resx">
+      <DependentUpon>Register Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Reports to HR.resx">
+      <DependentUpon>Reports to HR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\test.resx">
+      <DependentUpon>test.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\User Management.resx">
+      <DependentUpon>User Management.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel.resx">
+      <DependentUpon>UserPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\ClockIn.resx">
+      <DependentUpon>ClockIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\ClockOut.resx">
+      <DependentUpon>ClockOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\MyProfile.resx">
+      <DependentUpon>MyProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\userRegistration2.resx">
+      <DependentUpon>userRegistration2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userRegisteration.resx">
+      <DependentUpon>userRegisteration.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="namesDataSet.xsc">
+      <DependentUpon>namesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="namesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>namesDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="namesDataSet.xss">
+      <DependentUpon>namesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Resources\Computer login-rafiki %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer login%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
+    <Content Include="names.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Untitled-1.png" />
+    <None Include="Resources\NEW.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\time-out %281%29.png" />
+    <None Include="Resources\time %281%29.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\house.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\time-out.png" />
+    <None Include="Resources\time.png" />
+    <None Include="Resources\home-icon-silhouette.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\EMGU.CV.4.1.0.3420\build\EMGU.CV.targets" Condition="Exists('..\packages\EMGU.CV.4.1.0.3420\build\EMGU.CV.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EMGU.CV.4.1.0.3420\build\EMGU.CV.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EMGU.CV.4.1.0.3420\build\EMGU.CV.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
